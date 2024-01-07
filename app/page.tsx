@@ -7,7 +7,7 @@ export default function Home() {
     <main className="w-screen h-screen relative">
       <div
         className="flex items-center w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: 'url(/main-bg.webp)' }}
+        style={{ backgroundImage: 'url(/test-main-bg.jpg)' }}
       >
         <div className="pl-20 md:pl-40 pb-56 md:pb-20 flex flex-col gap-5 z-[10] max-w-[750px]">
           <h1 className="text-[50px] text-white font-semibold">
@@ -68,7 +68,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <div className="absolute bottom-0 right-0 z-[10]">
+      {/* <div className="absolute bottom-0 right-0 z-[10]">
         <Image
           src="/horse.png"
           alt="horse"
@@ -78,7 +78,7 @@ export default function Home() {
         />
 
         <Image src="/cliff.webp" alt="cliff" width={480} height={480} />
-      </div>
+      </div> */}
 
       <div className="absolute bottom-0 z-[5] w-full h-auto">
         <Image
@@ -86,7 +86,7 @@ export default function Home() {
           alt="trees"
           width={2000}
           height={2000}
-          className="w-full h-full"
+          className="w-full h-full "
         />
       </div>
 
@@ -95,7 +95,7 @@ export default function Home() {
         alt="stars"
         height={300}
         width={300}
-        className="absolute top-0 left-0 z-[10]"
+        className="absolute top-0 left-[450px] z-[10]"
       />
     </main>
   );

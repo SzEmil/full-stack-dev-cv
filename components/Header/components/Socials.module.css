@@ -1,0 +1,7 @@
+.icon {
+  color: white;
+  transition: color 200ms ease-in-out;
+}
+.icon:hover {
+  color: #ad4475;
+}

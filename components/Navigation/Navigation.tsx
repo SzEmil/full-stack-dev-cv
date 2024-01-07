@@ -29,22 +29,18 @@ export const Navigation = () => {
     }
   }, [isRouting]);
 
-
   return (
-    <div
-      style={{ left: '20%' }}
-      className="absolute z-[50] -bottom-20 w-[50%] md:w-[20%] max-h-[150px] rounded-full flex justify-between bg-black items-center border px-4 border-white py-7"
-    >
-      {isRouting && <Transition/>}
+    <div className="absolute z-[50] -bottom-20 left-0 sm:left-[42%]  max-h-[150px] rounded-full flex  bg-black items-center border px-4 border-white py-7">
+      {isRouting && <Transition />}
       {NAVIGATIONS.map(nav => (
         <Link
           key={nav.icon}
           href={nav.href}
-          className="mb-16 pl-4 min-w-[20%]"
+          className="mb-16 pl-4 pr-4 min-w-[20%]"
         >
           <nav.icon
             className={`w-[24px] h-[24px] ${
-              path === nav.href ? 'text-purple-800' : 'text-white'
+              path === nav.href ? 'text-[#ad4475]' : 'text-white'
             }`}
           />
         </Link>
