@@ -7,9 +7,9 @@ export default function Home() {
     <main className="w-screen h-screen relative">
       <div
         className="flex items-center w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: 'url(/test-main-bg.jpg)' }}
+        style={{ backgroundImage: 'url(/main-bg1.jpg)' }}
       >
-        <div className="pl-20 md:pl-40 pb-56 md:pb-20 flex flex-col gap-5 z-[10] max-w-[750px]">
+        <div className="pl-20 md:pl-40 pb-56 md:pb-20  flex flex-col gap-5 z-[10] max-w-[750px]">
           <h1 className="text-[50px] text-white font-semibold">
             Make anything possible with
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
@@ -79,7 +79,7 @@ export default function Home() {
 
         <Image src="/cliff.webp" alt="cliff" width={480} height={480} />
       </div> */}
-
+      {/* 
       <div className="absolute bottom-0 z-[5] w-full h-auto">
         <Image
           src="/trees.webp"
@@ -88,7 +88,7 @@ export default function Home() {
           height={2000}
           className="w-full h-full "
         />
-      </div>
+      </div> */}
 
       <Image
         src="/stars.png"

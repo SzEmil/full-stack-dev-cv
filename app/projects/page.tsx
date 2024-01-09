@@ -6,12 +6,9 @@ const Page = () => {
   return (
     <div
       style={{ backgroundImage: 'url(/Mountains.jpg)' }}
-      className="w-screen h-screen flex flex-col gap-10 items-center justify-center bg-center bg-cover"
+      className="w-screen h-screen flex flex-col gap-10 items-center justify-center bg-center bg-cover "
     >
-      <ProjectsSlider
-        projects={topProjects}
-        title="Most recent projects"
-      />
+      <ProjectsSlider projects={topProjects} title="Most recent projects" />
       <ProjectsSlider
         projects={easyProjects}
         speed={4000}

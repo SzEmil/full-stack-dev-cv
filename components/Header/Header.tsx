@@ -9,7 +9,7 @@ export const Header = () => {
         <div className="flex flex-row gap-3 items-center">
           <div className="relative">
             <Image
-              src="/horseLogo.jpg"
+              src="/logo.png"
               alt="logo"
               width={40}
               height={40}
