@@ -1,4 +1,5 @@
 export const ContactForm = () => {
+  //TODO: form validation maybe by zod
   return (
     <form
       action="https://formsubmit.co/f28d6c390aedf929c9efa17a9becb022"

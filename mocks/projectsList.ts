@@ -1,22 +1,18 @@
-import service from '../public/service.jpg';
-import pokestudio from '../public/pokestudio.jpg';
-import langChainPlatfrom from '../public/langChain.jpg';
-import chatApp from '../public/chatApp.jpg';
-import filmotekaReact from '../public/reactmovies.png';
-import reactImages from '../public/reactimages.png';
-import phonebook from '../public/phonebook.png';
-import filmLibrary from '../public/filmLibrary.png';
-import strizzes from '../public/strizzes.png';
-import breakout from '../public/breakout.png';
-import searchCountry from '../public/country.png';
-import icecream from '../public/icecream.png';
-import webstudio from '../public/webstudio.png';
+import { Project } from '@/types/data';
 
-export const topProjects = [
+export const topProjects: Project[] = [
   {
     id: '99',
     name: 'LangChain Learning Platform',
     picture: '/langChain.jpg',
+    images: [
+      '/projects/langchain/mainBaner.jpg',
+      '/projects/langchain/offer.jpg',
+      '/projects/langchain/buyCourse.jpg',
+      '/projects/langchain/menageCourses.jpg',
+      '/projects/langchain/exampleCoursePage.jpg',
+      '/projects/langchain/exampleQuiz.jpg',
+    ],
     tech: [
       'HTML5',
       'CSS3',
@@ -46,6 +42,20 @@ export const topProjects = [
     id: '98',
     name: 'Service',
     picture: '/service.jpg',
+    images: [
+      '/projects/service/Service.jpg',
+      '/projects/service/makeNewRestaurant.jpg',
+      '/projects/service/menageRestaurants.jpg',
+      '/projects/service/menageMenu.jpg',
+      '/projects/service/checkMenu.jpg',
+      '/projects/service/editMenu.jpg',
+      '/projects/service/inivtationsMEnagment.jpg',
+      '/projects/service/inviteFriend.jpg',
+      '/projects/service/menageinvitations.jpg',
+      '/projects/service/menageTables.jpg',
+      '/projects/service/menageTABLESrestaurant.jpg',
+      '/projects/service/overviewRestaurant.jpg',
+    ],
     tech: [
       'HTML5',
       'CSS3',
@@ -74,6 +84,10 @@ export const topProjects = [
     id: '97',
     name: 'Chat-App',
     picture: '/chatApp.jpg',
+    images: [
+      '/projects/chatapp/register.jpg',
+      '/projects/chatapp/chatOverview.jpg',
+    ],
     tech: [
       'HTML5',
       'CSS3',
@@ -98,22 +112,32 @@ export const topProjects = [
     git: 'https://github.com/SzEmil/chat-app',
   },
   {
-    id: 'project1',
+    id: '90',
     name: 'PokeStudio',
     picture: '/pokestudio.jpg',
+    images: [
+      '/projects/pokestudio/battle.jpg',
+      '/projects/pokestudio/packedPokemon.jpg',
+      '/projects/pokestudio/pokenews.jpg',
+      '/projects/pokestudio/pokestudio-main.jpg',
+      '/projects/pokestudio/pokestudio-pokemon-details.jpg',
+      '/projects/pokestudio/register.jpg',
+      '/projects/pokestudio/shop.jpg',
+      '/projects/pokestudio/userShelf.jpg',
+    ],
     tech: [
       'HTML5',
       'CSS3',
+      'Javascript',
       'Typescript',
       'React',
+      'Redux',
       'react-router',
-      'Redux/toolkit',
-      'react-persist',
-      'Firebase/Auth',
-      'Firebase/database',
-      'pokeApi',
+      'Redux',
       'Hooks',
+      'Api',
       'css-modules',
+      'pokeApi',
       'RWD',
     ],
     overview:
@@ -123,11 +147,42 @@ export const topProjects = [
   },
 ];
 
-export const easyProjects = [
+export const easyProjects: Project[] = [
   {
-    id: 'project2',
+    id: '80',
+    name: 'Wallet (Group Project)',
+    picture: '/projects/wallet/home.png',
+    images: [
+      '/projects/wallet/home.png',
+      '/projects/wallet/stats.png',
+      '/projects/wallet/welcome.png',
+    ],
+    tech: [
+      'HTML5',
+      'CSS3',
+      'React',
+      'Redux/toolkit',
+      'react-persist',
+      'NodeJs',
+      'Express',
+      'MongoDB',
+      'Auth-User',
+      'mongoose',
+      'REST API',
+      'Hooks',
+      'css-modules',
+      'RWD',
+    ],
+    overview:
+      'Aplication based on React library using hooks. The website design takes into account the use of Api, loaders, css-modules, react routing, react context and lazy loading.',
+    web: 'https://waldemarkubiak.github.io/wallet-six-masters-project/',
+    git: 'https://github.com/WaldemarKubiak/wallet-six-masters-project',
+  },
+  {
+    id: '89',
     name: 'Filmoteka (React)',
     picture: '/reactmovies.png',
+    images: ['/projects/filmotekareact/reactmovies.png'],
     tech: [
       'HTML5',
       'CSS3',
@@ -139,6 +194,7 @@ export const easyProjects = [
       'Api',
       'css-modules',
       'RWD',
+      'Docker'
     ],
     overview:
       'Aplication based on React library using hooks. The website design takes into account the use of Api, loaders, css-modules, react routing, react context and lazy loading.',
@@ -146,9 +202,10 @@ export const easyProjects = [
     git: 'https://github.com/SzEmil/Movies-React-app',
   },
   {
-    id: 'project3',
+    id: '88',
     name: 'Search Images (React)',
     picture: '/reactimages.png',
+    images: ['/projects/searchimages/reactimages.png'],
     tech: [
       'HTML5',
       'CSS3',
@@ -164,9 +221,10 @@ export const easyProjects = [
     git: 'https://github.com/SzEmil/Movies-React-app',
   },
   {
-    id: 'project4',
+    id: '87',
     name: 'Phonebook (React)',
     picture: '/phonebook.png',
+    images: ['/projects/phonebook/phonebook.png'],
     tech: [
       'HTML5',
       'CSS3',
@@ -185,9 +243,10 @@ export const easyProjects = [
     git: 'https://github.com/SzEmil/goit-react-hw-08-phonebook',
   },
   {
-    id: 'project5',
+    id: '86',
     name: 'Films Library (Group project)',
     picture: '/filmLibrary.png',
+    images: ['/projects/filmslibrarygroup/filmLibrary.png'],
     tech: ['HTML5', 'CSS3', 'Javascript', 'RWD', 'Api', 'Firebase'],
     overview:
       'Team leader of a group project based on javascript. My task was to code review, ensure the timeliness of the tasks performed, program the home page and user login panel using Firebase. The user on the website has the ability to view movies from the provided api database. After logging in, the user gets the option to add movies to his own library.',
@@ -195,29 +254,32 @@ export const easyProjects = [
     git: 'https://github.com/SzEmil/Group_Project_FIlms_Library',
   },
   {
-    id: 'project6',
+    id: '85',
     name: 'Strizzes company site',
     picture: '/strizzes.png',
+    images: ['/projects/strizzes/strizzes.png'],
     tech: ['HTML5', 'CSS3', 'Javascript', 'BEM', 'SASS', 'RWD'],
     overview:
       'A page used to present the company s available opportunities. The website is equipped with photo galleries and a contact form.',
-    web: 'https://www.strizzes.pl/',
+    web: 'https://szemil.github.io/Strizzes_site/',
     git: 'https://github.com/SzEmil/Strizzes_site',
   },
   {
-    id: 'project7',
+    id: '84',
     name: 'Breakout game',
     picture: '/breakout.png',
     tech: ['HTML5', 'CSS3', 'Javascript'],
+    images: ['/projects/breakout/breakout.png'],
     overview:
       'A simple game based on javascript. A project for a class in college. It uses vanilla javascript. The player s task is to break all the blocks by bouncing the ball off the paddle which is controlled with the keyboard.',
     web: 'https://szemil.github.io/Breakout-game/',
     git: 'https://github.com/SzEmil/Breakout-game',
   },
   {
-    id: 'project8',
+    id: '83',
     name: 'Search Country',
     picture: '/country.png',
+    images: ['/projects/searchcountry/country.png'],
     tech: ['HTML5', 'CSS3', 'Javascript', 'Api'],
     overview:
       'A page used to search for countries based on the data entered in the form.',
@@ -225,9 +287,10 @@ export const easyProjects = [
     git: 'https://github.com/SzEmil/Search-Country',
   },
   {
-    id: 'project9',
+    id: '82',
     name: 'Icecream site (Group project)',
     picture: '/icecream.png',
+    images: ['/projects/icecream/icecream.png'],
     tech: ['HTML5', 'CSS3', 'Javascript', 'RWD', 'BEM', 'SASS'],
     overview:
       'Team leader of a group project. My task was to take care of the correctness of the code or the timeliness of the tasks performed. The site is based mainly on HTML and CSS with a small amount of javascript. This page represents a potential ice cream shop site. The user can learn how his favorite flavors are made.',
@@ -235,9 +298,10 @@ export const easyProjects = [
     git: 'https://github.com/SzEmil/Group_Projekt_IceCream',
   },
   {
-    id: 'project10',
+    id: '81',
     name: 'Webstudio',
     picture: '/webstudio.png',
+    images: ['/projects/webstudio/webstudio.png'],
     tech: ['HTML5', 'CSS3', 'Javascript', 'BEM', 'SASS', 'RWD'],
     overview:
       'The first step in development as a web developer. A simple website using HTML and CSS with little javascript for modal windows or mobile menu. The page could be a potential website for a web design company.',
@@ -245,3 +309,5 @@ export const easyProjects = [
     git: 'https://github.com/SzEmil/WebStudio_site',
   },
 ];
+
+export const projects = [...topProjects, ...easyProjects];
