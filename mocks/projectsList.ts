@@ -105,6 +105,7 @@ export const topProjects: Project[] = [
       'Hooks',
       'css-modules',
       'RWD',
+      'Docker',
     ],
     overview:
       'Chat-App is a custom chat application designed for seamless communication with friends and peers. This application allows users to register as unique individuals, granting them access to the chat functionality. Users can choose from a list of available members and create new conversations with them. With the ability to manage multiple chat sessions simultaneously, Chat-App ensures a dynamic and interactive chatting experience for all its users.',
@@ -128,7 +129,6 @@ export const topProjects: Project[] = [
     tech: [
       'HTML5',
       'CSS3',
-      'Javascript',
       'Typescript',
       'React',
       'Redux',
@@ -145,6 +145,32 @@ export const topProjects: Project[] = [
     web: 'https://szemil.github.io/PokeStudio/',
     git: 'https://github.com/SzEmil/PokeStudio',
   },
+  {
+    id: '70',
+    name: 'Portfolio Web Page',
+    picture: '/projects/portfolio/portfolio1.png',
+    images: [
+      '/projects/portfolio/portfolio1.png',
+      '/projects/portfolio/portfolio2.png',
+      '/projects/portfolio/portfolio3.png',
+      '/projects/portfolio/portfolio4.png',
+    ],
+    tech: [
+      'HTML5',
+      'CSS3',
+      'Typescript',
+      'React',
+      'Tailwind',
+      'Framer',
+      'NextJs',
+      'SSR',
+      'RWD',
+    ],
+    overview:
+      'Application that allow waitstaff to add restaurants, menus with detailed dishes, manage tables, effortlessly split bills, solving billing and order management challenges. Also allows inviting waitstaff to collaborate. All data securely stored in a database.',
+    web: 'https://full-stack-dev-cv.vercel.app/',
+    git: 'https://github.com/SzEmil/full-stack-dev-cv',
+  },
 ];
 
 export const easyProjects: Project[] = [
@@ -160,6 +186,7 @@ export const easyProjects: Project[] = [
     tech: [
       'HTML5',
       'CSS3',
+      'Javascript',
       'React',
       'Redux/toolkit',
       'react-persist',
@@ -194,7 +221,7 @@ export const easyProjects: Project[] = [
       'Api',
       'css-modules',
       'RWD',
-      'Docker'
+      'Docker',
     ],
     overview:
       'Aplication based on React library using hooks. The website design takes into account the use of Api, loaders, css-modules, react routing, react context and lazy loading.',
@@ -311,3 +338,22 @@ export const easyProjects: Project[] = [
 ];
 
 export const projects = [...topProjects, ...easyProjects];
+
+export const technologies = [
+  'HTML5',
+  'CSS3',
+  'Tailwind',
+  'Javascript',
+  'Firebase',
+  'Typescript',
+  'React',
+  'Redux/toolkit',
+  'react-persist',
+  'NextJs',
+  'NodeJs',
+  'Express',
+  'Web-Sockets',
+  'SQL',
+  'MongoDB',
+  'Docker',
+];

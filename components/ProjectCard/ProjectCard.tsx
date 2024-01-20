@@ -21,7 +21,7 @@ export const ProjectCard = ({
   git,
 }: ProjectCardProps) => {
   return (
-    <div className="lg:w-[450px] lg:h-[280px] w-[350px] h-[200px] rounded-md">
+    <div className="lg:w-[450px] lg:h-[280px] w-[350px] h-[200px] rounded-md hover:border">
       <Link href={`${Routes.projects}/${id}`}>
         <div
           style={{ backgroundImage: `url(${picture})` }}

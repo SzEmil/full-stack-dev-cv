@@ -1,12 +1,8 @@
-import { SkillsSwiper } from './components/SkillsSwiper';
-import { frontendSkills } from '@/mocks/skillsList';
-import { backendSkills } from '@/mocks/skillsList';
-import { dbSkills } from '@/mocks/skillsList';
-import { devopsSkills } from '@/mocks/skillsList';
+import { SkillsPicker } from './components/SkillsPicker';
 
 export const SkillsSlider = () => {
   return (
-    <div className="flex flex-col gap-20 w-[100%] text-center items-center mb-[150px] md:mb-0 mt-[350px] md:mt-0">
+    <div className="flex flex-col gap-10 w-[100%] text-center items-center mb-[150px] md:mb-0 mt-[350px] md:mt-0">
       <div className="flex flex-col items-center gap-4">
         <h1 className="font-semibold text-white text-[50px]">
           Skills
@@ -20,13 +16,7 @@ export const SkillsSlider = () => {
           Using the latest tech this world has to offer
         </p>
       </div>
-      <SkillsSwiper skillsData={frontendSkills ?? []} title="Frontend" />
-      <SkillsSwiper
-        title="Backend"
-        skillsData={[...backendSkills, ...devopsSkills] ?? []}
-        reverseDirection={true}
-        slidesPerView={4}
-      />
+      <SkillsPicker />
     </div>
   );
 };

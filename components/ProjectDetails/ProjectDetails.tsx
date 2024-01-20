@@ -1,9 +1,9 @@
 import { Project } from '@/types/data';
-import { ImageSlider } from './components/ImageSlider';
 import { ProjectNavigation } from './components/ProjectNavigation';
 import { TechStack } from './components/TechStack';
 import { Routes } from '@/constants/endpoints';
 import Link from 'next/link';
+import { ImagesCarousel } from './components/ImagesCarousel/ImagesCarousel';
 
 type ProjectDetailsProps = {
   project: Project;
@@ -25,7 +25,7 @@ export const ProjectDetails = ({ project }: ProjectDetailsProps) => {
           </p>
         </Link>
       </div>
-      <ImageSlider images={project.images} />
+      <ImagesCarousel images={project.images} />
     </div>
   );
 };

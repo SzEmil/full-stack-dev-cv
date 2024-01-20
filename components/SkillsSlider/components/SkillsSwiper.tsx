@@ -32,7 +32,15 @@ export const SkillsSwiper = ({
       >
         {skillsData?.map(skill => (
           <SwiperSlide key={skill.name}>
-            <Image src={skill.Image} alt={skill.name} width={80} height={80} />
+            <div className='flex flex-col justify-center items-center gap-1'>
+              <Image
+                src={skill.Image}
+                alt={skill.name}
+                width={80}
+                height={80}
+              />
+              <p className='text-white'>{skill.name}</p>
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
