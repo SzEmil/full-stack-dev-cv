@@ -134,6 +134,7 @@ export const topProjects: Project[] = [
       'Redux',
       'react-router',
       'Redux',
+      'Firebase',
       'Hooks',
       'Api',
       'css-modules',
@@ -250,8 +251,8 @@ export const easyProjects: Project[] = [
   {
     id: '87',
     name: 'Phonebook (React)',
-    picture: '/phonebook.png',
-    images: ['/projects/phonebook/phonebook.png'],
+    picture: '/projects/phonebook/phonebok1.png',
+    images: ['/projects/phonebook/phonebok1.png','/projects/phonebook/phonebok2.png'],
     tech: [
       'HTML5',
       'CSS3',

@@ -7,7 +7,7 @@ export default function Home() {
     <main className="w-screen h-screen relative">
       <div
         className=" absolute flex items-center w-full h-full bg-cover bg-center"
-         style={{ backgroundImage: 'url(/main-bg1.jpg)' }}
+        style={{ backgroundImage: 'url(/main-bg1.jpg)' }}
       >
         <div className="pl-20 md:pl-40 pb-56 md:pb-20  flex flex-col gap-5 z-[10] max-w-[750px]">
           <h1 className="text-[50px] text-white font-semibold">
@@ -18,8 +18,9 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-gray-200 hidden md:block">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Passionate creator with a flair for innovative design and
+            cutting-edge technology. Transforming ideas into captivating digital
+            experiences that leave a lasting impact.
           </p>
           <div className="flex-col md:flex-row hidden md:flex gap-5">
             <Link

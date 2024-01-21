@@ -1,6 +1,10 @@
 export const frontendSkills = {
   name: 'Frontend',
-  perView: 5,
+  perView: {
+    desktop: 5,
+    tablet: 4,
+    mobile: 2,
+  },
   skills: [
     {
       name: 'Html 5',
@@ -55,7 +59,11 @@ export const frontendSkills = {
 };
 export const backendSkills = {
   name: 'Backend',
-  perView: 3,
+  perView: {
+    desktop: 3,
+    tablet: 3,
+    mobile: 2,
+  },
   skills: [
     {
       name: 'Next js',
@@ -81,7 +89,11 @@ export const backendSkills = {
 };
 export const dbSkills = {
   name: 'Database',
-  perView: 3,
+  perView: {
+    desktop: 3,
+    tablet: 3,
+    mobile: 2,
+  },
   skills: [
     {
       name: 'Firebase',
@@ -103,7 +115,11 @@ export const dbSkills = {
 };
 export const devopsSkills = {
   name: 'DevOps',
-  perView: 1,
+  perView: {
+    desktop: 1,
+    tablet: 1,
+    mobile: 1,
+  },
   skills: [
     {
       name: 'Docker',

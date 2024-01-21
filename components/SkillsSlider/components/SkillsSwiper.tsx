@@ -21,7 +21,6 @@ export const SkillsSwiper = ({
 }: SkillsSwiperProps) => {
   return (
     <div className="flex flex-col gap-10 max-w-[100%] md:max-w-[80%] text-center items-center">
-      <h1 className="text-white font-semibold text-[24px]">{title}</h1>
       <Swiper
         slidesPerView={slidesPerView}
         loop={true}

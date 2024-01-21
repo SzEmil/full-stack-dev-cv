@@ -13,7 +13,7 @@ export const SkillsPicker = () => {
   const [skillsName, setSkillsName] = useState<string>(frontendSkills.name);
 
   const currentSkills = allSkills.find(skill => skill.name === skillsName);
-  
+
   const isDesktop = useMediaQuery({
     query: '(min-width: 1620px)',
   });
@@ -22,7 +22,7 @@ export const SkillsPicker = () => {
   });
   return (
     <div className="flex flex-col gap-6 w-[100%] justify-center">
-      <div className="flex gap-2 justify-center">
+      <div className="flex gap-2 justify-center flex-wrap">
         {allSkills.map(skill => (
           <button
             key={skill.name}
@@ -37,13 +37,24 @@ export const SkillsPicker = () => {
       <div className="flex flex-col gap-5 w-[100%] justify-center items-center">
         <SkillsSwiper
           skillsData={currentSkills?.skills ?? []}
-          title={currentSkills?.name}
-          slidesPerView={currentSkills?.perView}
+          slidesPerView={
+            isDesktop
+              ? currentSkills?.perView.desktop
+              : isTablet
+              ? currentSkills?.perView.tablet
+              : currentSkills?.perView.mobile
+          }
         />
         <SkillsSwiper
           skillsData={currentSkills?.skills ?? []}
           reverseDirection={true}
-          slidesPerView={currentSkills?.perView}
+          slidesPerView={
+            isDesktop
+              ? currentSkills?.perView.desktop
+              : isTablet
+              ? currentSkills?.perView.tablet
+              : currentSkills?.perView.mobile
+          }
         />
       </div>
     </div>
