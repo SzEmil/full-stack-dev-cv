@@ -30,21 +30,23 @@ export const Navigation = () => {
   }, [isRouting]);
 
   return (
-    <div className="absolute z-[50] -bottom-20 left-0 sm:left-[42%]  max-h-[150px] rounded-full flex  bg-black items-center border px-4 border-white py-7">
-      {isRouting && <Transition />}
-      {NAVIGATIONS.map(nav => (
-        <Link
-          key={nav.icon}
-          href={nav.href}
-          className="mb-16 pl-4 pr-4 min-w-[20%]"
-        >
-          <nav.icon
-            className={`w-[24px] h-[24px] ${
-              path === nav.href ? 'text-[#ad4475]' : 'text-white'
-            }`}
-          />
-        </Link>
-      ))}
+    <div className='flex w-screen justify-center'>
+      <div className="absolute z-[50] -bottom-20   max-h-[150px] rounded-full flex  bg-black items-center border px-4 border-white py-7">
+        {isRouting && <Transition />}
+        {NAVIGATIONS.map(nav => (
+          <Link
+            key={nav.icon}
+            href={nav.href}
+            className="mb-16 pl-4 pr-4 min-w-[20%]"
+          >
+            <nav.icon
+              className={`w-[24px] h-[24px] ${
+                path === nav.href ? 'text-[#ad4475]' : 'text-white'
+              }`}
+            />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 };
