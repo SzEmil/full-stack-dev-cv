@@ -125,6 +125,7 @@ export const devopsSkills = {
       name: 'Docker',
       Image: '/docker.webp',
     },
+    { name: 'Docker-Compose', Image: '/docker-compose.png' },
   ],
 };
 
