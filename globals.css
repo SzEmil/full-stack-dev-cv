@@ -1,7 +1,6 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 
 body {
     overflow: hidden;
@@ -21,4 +20,4 @@ body {
   
   .flip-card-back {
     transform: rotateY(180deg);
-  }
+  } */
