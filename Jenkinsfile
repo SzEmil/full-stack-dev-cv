@@ -1,17 +1,14 @@
 pipeline {
     agent {
-        docker {
-            image 'node:20.11.0-alpine3.19'
-            args '-p 3000:3000'
-        }
-    }
-    environment {
-        CI = 'true'
+        node {
+            label 'docker-agent-python'
+            }
     }
     stages {
         stage('Build') {
             steps {
-                sh 'npm install'
+                echo 'building'
+                //sh 'npm install'
             }
         }
         stage('Test') {
