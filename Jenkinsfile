@@ -34,7 +34,7 @@ pipeline {
         }
         stage('Cloning our Git') {
             steps {
-                git 'https://github.com/SzEmil/full-stack-dev-cv'
+                git branch: 'main', url: 'https://github.com/SzEmil/full-stack-dev-cv'
             }
         }
 
