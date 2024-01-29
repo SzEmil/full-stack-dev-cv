@@ -6,7 +6,11 @@ pipeline {
     dockerImage = ''
     }
 
-    agent any
+    agent { 
+        node {
+            label 'docker-agent-python'
+            }
+      }
 
     // tools {nodejs "node"}
 
