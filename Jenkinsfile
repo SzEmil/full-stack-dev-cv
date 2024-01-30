@@ -6,8 +6,12 @@ pipeline {
     dockerImage = ''
     }
 
-    agent any
-
+    // agent any
+    agent { 
+        node {
+            label 'docker-jenkins-agent'
+            }
+      }
     // tools {nodejs "node"}
 
     stages {
