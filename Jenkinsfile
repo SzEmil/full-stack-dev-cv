@@ -7,12 +7,15 @@ pipeline {
     }
 
     // agent any
-    agent { 
-        node {
-            label 'docker-jenkins-agent'
-            }
-      }
-    // tools {nodejs "node"}
+    // agent { 
+    //     node {
+    //         label 'docker-jenkins-agent'
+    //         }
+    //   }
+    tools {
+        nodejs "node"
+        dockerTool "docker"
+    }
 
     stages {
         // stage('Build') {
