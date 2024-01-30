@@ -2,7 +2,7 @@ pipeline {
 
     environment {
     registry = "szemil/my-nextjs-app"
-    registryCredential = 'dockerhub_id'
+    registryCredential = 'docker-hub-credentials'
     dockerImage = ''
     }
 
