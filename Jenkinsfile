@@ -6,15 +6,15 @@ pipeline {
     dockerImage = ''
     }
 
-    agent any
-    // agent { 
-    //     node {
-    //         label 'docker-jenkins-agent'
-    //         }
-    //   }
+   // agent any
+    agent { 
+        node {
+            label 'docker-jenkins-agent'
+            }
+      }
     tools {
         nodejs "node"
-        // dockerTool "docker"
+       // dockerTool "docker"
     }
 
     stages {
