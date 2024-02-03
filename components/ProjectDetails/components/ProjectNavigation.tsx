@@ -9,7 +9,7 @@ type ProjectNavigationProps = {
 
 export const ProjectNavigation = ({ web, git }: ProjectNavigationProps) => {
   return (
-    <div className="flex gap-12 mt-16 mb-20">
+    <div className="flex gap-12 mt-16 mb-8 xl:mb-10 xl:mt-16">
       <Link href={git}>
         <div className="inline-flex gap-4 text-white transition-colors items-center hover:text-[#ad4475] hover:cursor-pointer">
           <FaGithub size={40} />

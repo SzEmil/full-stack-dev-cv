@@ -22,8 +22,8 @@ export const ImagesCarousel = ({ images }: ImagesCarouselProps) => {
       emulateTouch={true}
       interval={2000}
       transitionTime={500}
-      width="700px"
-      className='rounded-md'
+      // width="700px"
+      className='rounded-md w-[100%] max-w-[700px] mb-[70px]'
     >
       {images.map(image => (
         <div key={image} className='max-w-[700px] h-[450px] flex items-center justify-center'>

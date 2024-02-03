@@ -1,17 +1,21 @@
+//yarn run cypress open
 describe('My first test', () => {
-  it('Visits the kitchen sink page', () => {
-    cy.visit('https://example.cypress.io');
-  });
+  it('Check project filters works', () => {
+    cy.visit('http://localhost:3000/projects');
 
-  it('after redirct to type page, input should show text after user write it into', () => {
-    cy.visit('https://example.cypress.io');
+    cy.url().should('include', '/projects');
 
-    cy.contains('type').click();
+    cy.contains('Docker').click();
 
-    cy.url().should('include', 'commands/actions');
+    cy.get('a[href="/projects/89"]').first().as('project');
+    cy.get('@project').click();
 
-    cy.get('.action-email').type('fake@email.com')
+    cy.get('@project').then(project => {
+      const projectUrl = project.attr('href');
 
-    cy.get('.action-email').should('have.value', 'fake@email.com')
+      cy.get('@project').click();
+
+      cy.url().should('include', projectUrl);
+    });
   });
 });

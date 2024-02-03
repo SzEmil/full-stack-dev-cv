@@ -24,7 +24,7 @@ const ProjectPage = async ({ params }: ProductPageProps) => {
   return (
     <div
       style={{ backgroundImage: 'url(/bg-2.jpg)', overflowY: 'scroll' }}
-      className="h-screen w-screen flex items-center justify-center bg-cover bg-center px-[80px]"
+      className="h-screen w-screen flex items-center justify-center bg-cover bg-center"
     >
       {project ? (
         <ProjectDetails project={project} />
