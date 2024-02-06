@@ -4,6 +4,7 @@ import { ProjectCardProps } from './ProjectsSlider.types';
 import { ProjectCard } from '../ProjectCard/ProjectCard';
 import { useState } from 'react';
 import { technologies } from '@/mocks/projectsList';
+import { MobileNav } from './MobileNav';
 
 type SkillsSwiperProps = {
   projects: ProjectCardProps[];
@@ -36,7 +37,11 @@ export const ProjectsList = ({ projects }: SkillsSwiperProps) => {
   return (
     <div className="h-screen w-screen flex justify-center">
       <div className="flex flex-col gap-10 max-w-[90%] max-h-[80%] lg:px-4 overflow-y-scroll mt-[105px]">
-        <div className="flex flex-wrap gap-2">
+        <MobileNav
+          handleAddFilter={handleAddFilter}
+          selectedTechnologies={selectedTechnologies}
+        />
+        <div className="flex-wrap gap-2 hidden xl:flex">
           {technologies.map(tech => (
             <button
               className="text-[16px] px-4 py-2 bg-[rgba(0,0,0,0.3)] inline rounded-md text-white hover:text-[#ad4475]"

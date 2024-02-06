@@ -166,6 +166,7 @@ export const topProjects: Project[] = [
       'NextJs',
       'SSR',
       'RWD',
+      'Cypress'
     ],
     overview:
       'Application that allow waitstaff to add restaurants, menus with detailed dishes, manage tables, effortlessly split bills, solving billing and order management challenges. Also allows inviting waitstaff to collaborate. All data securely stored in a database.',
@@ -285,7 +286,7 @@ export const easyProjects: Project[] = [
     id: '85',
     name: 'Strizzes company site',
     picture: '/strizzes.png',
-    images: ['/projects/strizzes/strizzes.png'],
+    images: ['/projects/strizzes/strizzes.png','/projects/strizzes/strizzes2.png'],
     tech: ['HTML5', 'CSS3', 'Javascript', 'BEM', 'SASS', 'RWD'],
     overview:
       'A page used to present the company s available opportunities. The website is equipped with photo galleries and a contact form.',
@@ -326,6 +327,17 @@ export const easyProjects: Project[] = [
     git: 'https://github.com/SzEmil/Group_Projekt_IceCream',
   },
   {
+    id: '79',
+    name: 'Mo-Go',
+    picture: '/projects/mogo/mogo1.png',
+    images: ['/projects/mogo/mogo1.png',"/projects/mogo/mogo2.png","/projects/mogo/mogo3.png"],
+    tech: ['HTML5', 'CSS3', 'BEM', 'SASS', 'RWD'],
+    overview:
+      'The first steps in development as a web developer. A simple website using HTML and CSS with little javascript for modal windows or mobile menu. The page could be a potential website for a web design company.',
+    web: 'https://szemil.github.io/Mo-Go-Project/',
+    git: 'https://github.com/SzEmil/Mo-Go-Project',
+  },
+  {
     id: '81',
     name: 'Webstudio',
     picture: '/webstudio.png',
@@ -352,9 +364,9 @@ export const technologies = [
   'react-persist',
   'NextJs',
   'NodeJs',
-  'Express',
   'Web-Sockets',
   'SQL',
   'MongoDB',
   'Docker',
+  'Cypress'
 ];

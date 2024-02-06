@@ -116,9 +116,9 @@ export const dbSkills = {
 export const devopsSkills = {
   name: 'DevOps',
   perView: {
-    desktop: 1,
-    tablet: 1,
-    mobile: 1,
+    desktop: 2,
+    tablet: 2,
+    mobile: 2,
   },
   skills: [
     {
@@ -126,6 +126,34 @@ export const devopsSkills = {
       Image: '/docker.webp',
     },
     { name: 'Docker-Compose', Image: '/docker-compose.png' },
+    { name: 'Jenkins', Image: '/jenkins.png' },
+  ],
+};
+
+export const otherSkills = {
+  name: 'Other',
+  perView: {
+    desktop: 3,
+    tablet: 3,
+    mobile: 2,
+  },
+  skills: [
+    {
+      name: 'Figma',
+      Image: '/figma.png',
+    },
+    {
+      name: 'Jira',
+      Image: '/jira.png',
+    },
+    {
+      name: 'Cypress',
+      Image: '/cypress.svg',
+    },
+    {
+      name: 'Jest',
+      Image: '/jest.svg',
+    },
   ],
 };
 
@@ -134,4 +162,5 @@ export const allSkills = [
   backendSkills,
   dbSkills,
   devopsSkills,
+  otherSkills,
 ];
