@@ -14,7 +14,7 @@ export const MobileNav = ({
 }: NavBarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="w-[100%]">
+    <div className="w-[100%] xl:hidden">
       <button
         onClick={() => setIsMenuOpen(prevVal => !prevVal)}
         style={{ transform: isMenuOpen ? 'rotateX(0deg)' : 'rotateX(-180deg)' }}
