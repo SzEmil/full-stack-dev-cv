@@ -166,7 +166,8 @@ export const topProjects: Project[] = [
       'NextJs',
       'SSR',
       'RWD',
-      'Cypress'
+      'Cypress',
+      'Docker'
     ],
     overview:
       'Application that allow waitstaff to add restaurants, menus with detailed dishes, manage tables, effortlessly split bills, solving billing and order management challenges. Also allows inviting waitstaff to collaborate. All data securely stored in a database.',
