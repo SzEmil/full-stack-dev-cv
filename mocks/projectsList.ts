@@ -2,6 +2,48 @@ import { Project } from '@/types/data';
 
 export const topProjects: Project[] = [
   {
+    id: '1',
+    name: 'Pixel Perfect',
+    picture: '/projects/pixelPerfect/pixel1.png',
+    images: [
+      '/projects/pixelPerfect/pixel1.png',
+      '/projects/pixelPerfect/pixel2.png',
+      '/projects/pixelPerfect/pixel3.png',
+      '/projects/pixelPerfect/pixel4.png',
+      '/projects/pixelPerfect/pixel5.png',
+    ],
+    tech: [
+      'HTML5',
+      'CSS3',
+      'Typescript',
+      'React',
+      'NextJs',
+      'Tailwind',
+      'SSR',
+      'MongoDB',
+      'Stripe',
+      'Clerk',
+      'mongoose',
+      'Server Actions',
+      'Cloudinary',
+      'RWD',
+    ],
+    overview: `Unleash your creativity with our AI-powered image transformer. Explore a suite of features to enhance your images:
+      Secure user access and control with registration, login, and route protection.
+      Community showcase: Discover user transformations and find inspiration.
+      Advanced search: Find specific images based on content or objects.
+      Image restoration, recoloring, and generative fill: Enhance and customize images with ease.
+      Object and background removal: Clean up and extract objects with precision.
+      Download transformed images, view details, and manage transformations: Track and control your edits.
+      Credits system: Earn or purchase credits for continued use.
+      Profile page and secure credit purchases: Manage your images and buy credits seamlessly.
+      Responsive UI/UX: Enjoy a smooth experience on any device.
+  
+       Transform your images and create stunning visuals with this powerful platform.`,
+    web: 'https://pixel-perfect-liard.vercel.app/',
+    git: 'https://github.com/SzEmil/pixel-perfect',
+  },
+  {
     id: '99',
     name: 'LangChain Learning Platform',
     picture: '/langChain.jpg',
@@ -167,7 +209,7 @@ export const topProjects: Project[] = [
       'SSR',
       'RWD',
       'Cypress',
-      'Docker'
+      'Docker',
     ],
     overview:
       'Application that allow waitstaff to add restaurants, menus with detailed dishes, manage tables, effortlessly split bills, solving billing and order management challenges. Also allows inviting waitstaff to collaborate. All data securely stored in a database.',
@@ -254,7 +296,10 @@ export const easyProjects: Project[] = [
     id: '87',
     name: 'Phonebook (React)',
     picture: '/projects/phonebook/phonebok1.png',
-    images: ['/projects/phonebook/phonebok1.png','/projects/phonebook/phonebok2.png'],
+    images: [
+      '/projects/phonebook/phonebok1.png',
+      '/projects/phonebook/phonebok2.png',
+    ],
     tech: [
       'HTML5',
       'CSS3',
@@ -287,7 +332,10 @@ export const easyProjects: Project[] = [
     id: '85',
     name: 'Strizzes company site',
     picture: '/strizzes.png',
-    images: ['/projects/strizzes/strizzes.png','/projects/strizzes/strizzes2.png'],
+    images: [
+      '/projects/strizzes/strizzes.png',
+      '/projects/strizzes/strizzes2.png',
+    ],
     tech: ['HTML5', 'CSS3', 'Javascript', 'BEM', 'SASS', 'RWD'],
     overview:
       'A page used to present the company s available opportunities. The website is equipped with photo galleries and a contact form.',
@@ -331,7 +379,11 @@ export const easyProjects: Project[] = [
     id: '79',
     name: 'Mo-Go',
     picture: '/projects/mogo/mogo1.png',
-    images: ['/projects/mogo/mogo1.png',"/projects/mogo/mogo2.png","/projects/mogo/mogo3.png"],
+    images: [
+      '/projects/mogo/mogo1.png',
+      '/projects/mogo/mogo2.png',
+      '/projects/mogo/mogo3.png',
+    ],
     tech: ['HTML5', 'CSS3', 'BEM', 'SASS', 'RWD'],
     overview:
       'The first steps in development as a web developer. A simple website using HTML and CSS with little javascript for modal windows or mobile menu. The page could be a potential website for a web design company.',
@@ -369,5 +421,5 @@ export const technologies = [
   'SQL',
   'MongoDB',
   'Docker',
-  'Cypress'
+  'Cypress',
 ];
