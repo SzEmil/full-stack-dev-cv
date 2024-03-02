@@ -11,6 +11,9 @@ export const topProjects: Project[] = [
       '/projects/pixelPerfect/pixel3.png',
       '/projects/pixelPerfect/pixel4.png',
       '/projects/pixelPerfect/pixel5.png',
+      '/projects/pixelPerfect/pixel6.png',
+      '/projects/pixelPerfect/pixel7.png',
+      '/projects/pixelPerfect/pixel8.png',
     ],
     tech: [
       'HTML5',
