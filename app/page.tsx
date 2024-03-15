@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
+    <XD></XD>
     <main className="w-screen h-screen relative">
       <div
         className=" absolute flex items-center w-full h-full bg-cover bg-center"

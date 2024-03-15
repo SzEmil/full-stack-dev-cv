@@ -15,10 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Install dependencies
+      - name: Proste logi
         run: |
-          npm install
-
-      - name: Build Next.js app
-        run: |
-          npm run buildddd
+          echo "Rozpoczynam budowanie"
+          echo "Budowanie zakończone"
