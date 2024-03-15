@@ -21,4 +21,4 @@ jobs:
 
       - name: Build Next.js app
         run: |
-          npm run build
+          npm run buildddd
