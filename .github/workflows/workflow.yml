@@ -19,3 +19,11 @@ jobs:
         run: |
           echo "Rozpoczynam budowanie"
           echo "Budowanie zakończone"
+
+      - name: install dependencies
+        run: |
+          npm ci
+      
+      - name: build nextjs app
+        run: |
+          npm run build
