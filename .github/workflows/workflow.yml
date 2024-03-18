@@ -3,10 +3,10 @@ name: Build Next.js App
 on:
   push:
     branches:
-      - main
+      - '**'
   pull_request:
     branches:
-      - any
+      - '**'
 
 jobs:
   build:
@@ -19,3 +19,11 @@ jobs:
         run: |
           echo "Rozpoczynam budowanie"
           echo "Budowanie zakończone"
+
+      # - name: install dependencies
+      #   run: |
+      #     npm ci
+      
+      # - name: build nextjs app
+      #   run: |
+      #     npm run build

@@ -127,6 +127,7 @@ export const devopsSkills = {
     },
     { name: 'Docker-Compose', Image: '/docker-compose.png' },
     { name: 'Jenkins', Image: '/jenkins.png' },
+    { name: 'Github-Actions', Image: 'https://cdn-icons-png.flaticon.com/512/25/25231.png' },
   ],
 };
 
