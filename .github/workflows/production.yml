@@ -18,5 +18,12 @@ jobs:
       - name: Pull Vercel Environment Information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: Deploy Project Artifacts to Vercel
-        run: vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }} wait --no-exit
+      # - name: Deploy Project Artifacts to Vercel
+      #   run: vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }} wait --no-exit
+
+      - name: Deploy Project Artifacts to Vercel (as background job)
+        run: |
+          bash -c "vercel deploy --prod --token=${{ secrets.VERCEL_TOKEN }} &"
+
+      - name: Continue workflow (without waiting for Vercel)
+        run: echo "Deployment triggered. Skipping wait."
