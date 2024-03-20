@@ -33,21 +33,18 @@ jobs:
 
       - name: Deploy Project Artifacts to Vercel (as background job)
         run: |
-          timeout 15 bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} 2>&1 > deploy.log &"
+           bash -c "vercel deploy --no-wait --token=${{ secrets.VERCEL_TOKEN }} >deploy.log"
 
       - name: Show Deploy Log
         id: vercel-url
-        run: |
-
-          vercel_deploy_url=$(grep -Eo "https?://[^ ]+" deploy.log)
-      
-          echo "vercel-deploy-url=$vercel_deploy_url"
-      
+        run: |     
           echo "vercel-deploy-url=$(cat deploy.log)" >> $GITHUB_OUTPUT
+
       - name: Display URL
         run: |
           echo ${{steps.vercel-url.outputs.vercel-deploy-url}}
 
+# timeout 15 bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} 2>&1 > deploy.log &"
 
 #https://full-stack-dev-q0aanixpi-szemil.vercel.app
 # - uses: actions/github-script@v3
