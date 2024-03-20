@@ -31,11 +31,19 @@ jobs:
           secrets.VERCEL_TOKEN }}
 
       - name: Deploy Project Artifacts to Vercel (as background job)
-        # run: |
-        #    echo "vercel-deploy=$(bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} &")" >> $GITHUB_OUTPUT
-         run: |
+        run: |
             echo bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} &"
         id: trigger_vercel
+
+      - name: Extract Preview URL
+        run: |
+            output="$GITHUB_OUTPUT"  
+
+            preview_url=$(grep -Eo "Preview: https.*" <<< "$output")
+
+            preview_url=${preview_url##*:}
+
+            echo "Preview URL: $preview_url"
 
       - name: Display logs
         run: |
@@ -52,3 +60,6 @@ jobs:
       #         repo: context.repo.repo,
       #         body: 'The preview URL is: VERCEL PREVIEW URL.'
       #       });
+
+        # run: |
+        #    echo "vercel-deploy=$(bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} &")" >> $GITHUB_OUTPUT
