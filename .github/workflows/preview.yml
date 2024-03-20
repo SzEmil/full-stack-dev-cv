@@ -38,13 +38,12 @@ jobs:
 
       - name: Show Deploy Log
         run: |
-          cat deploy.log
 
           vercel_deploy_url=$(grep -Eo "https?://[^ ]+" deploy.log)
       
           echo "vercel-deploy-url=$vercel_deploy_url"
       
-          echo "vercel-deploy-url=$(vercel_deploy_url)" >> $GITHUB_OUTPUT
+          echo "vercel-deploy-url=$(grep -Eo "https?://[^ ]+" deploy.log)" >> $GITHUB_OUTPUT
 
       - name: Display URL
         run: |
