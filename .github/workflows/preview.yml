@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: Preview
-      url: ${{ steps.trigger_vercel.outputs.vercel-deploy-url }}
+      url: ${{ steps.vercel-url.outputs.vercel-deploy-url }}
 
     steps:
       - uses: actions/checkout@v3
