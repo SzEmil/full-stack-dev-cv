@@ -30,3 +30,7 @@ jobs:
         run: |
           bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} &"
 
+      - name: Save Preview URL
+        run: |
+          bash "chmod +x ./CI-CD/scripts/getPreviewURL.sh"
+          bash './CI-CD/scripts/getPreviewURL.sh'
