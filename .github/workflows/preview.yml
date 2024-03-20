@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: Preview
-      url: ${{ steps.trigger_vercel.outputs.vercel-deploy }}
+      # url: ${{ steps.trigger_vercel.outputs.vercel-deploy }}
+      url: https://full-stack-dev-q0bbnixpi-szemil.vercel.app
     steps:
       - uses: actions/checkout@v3
 
@@ -32,24 +33,16 @@ jobs:
 
       - name: Deploy Project Artifacts to Vercel (as background job)
         run: |
-            echo bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} &"
+            url="$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})"
+            vercel alias --token=${{ secrets.VERCEL_TOKEN }} set "$url" full-stack-dev-q0bbnixpi-szemil.vercel.app
         id: trigger_vercel
 
-      - name: Extract Preview URL
-        run: |
-            output="$GITHUB_OUTPUT"  
-
-            preview_url=$(grep -Eo "Preview: https.*" <<< "$output")
-
-            preview_url=${preview_url##*:}
-
-            echo "Preview URL: $preview_url"
 
       - name: Display logs
         run: |
           echo ${{steps.trigger_vercel.outputs.vercel-deploy}}
 
-
+#https://full-stack-dev-q0aanixpi-szemil.vercel.app
       # - uses: actions/github-script@v3
       #   with:
       #     github-token: ${{secrets.GITHUB_TOKEN}}
@@ -60,6 +53,8 @@ jobs:
       #         repo: context.repo.repo,
       #         body: 'The preview URL is: VERCEL PREVIEW URL.'
       #       });
+
+      # bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} &"
 
         # run: |
         #    echo "vercel-deploy=$(bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} &")" >> $GITHUB_OUTPUT
