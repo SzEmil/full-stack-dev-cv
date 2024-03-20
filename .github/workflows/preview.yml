@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: Preview
-      url: ${{ steps.trigger_vercel.outputs.vercel-deploy }}
+      url: ${{ steps.trigger_vercel.outputs.vercel-deploy-url }}
 
     steps:
       - uses: actions/checkout@v3
@@ -39,22 +39,29 @@ jobs:
       - name: Show Deploy Log
         run: |
           cat deploy.log
+
+          vercel_deploy_url=$(grep -Eo "https?://[^ ]+" deploy.log)
+      
+          echo "vercel-deploy-url=$vercel_deploy_url"
+      
+          echo "vercel-deploy-url=$vercel_deploy_url" >> $GITHUB_OUTPUT
+
       # - name: Display logs
       #   run: |
-      #     echo ${{steps.trigger_vercel.outputs.vercel-deploy}}
-
+      #     echo ${{steps.trigger_vercel.outputs.vercel-deploy-url}}
 
   # echo "vercel-deploy=$(bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} &")" >> $GITHUB_OUTPUT
-#https://full-stack-dev-q0aanixpi-szemil.vercel.app
-      # - uses: actions/github-script@v3
-      #   with:
-      #     github-token: ${{secrets.GITHUB_TOKEN}}
-      #     script: |
-      #       github.issues.createComment({
-      #         issue_number: context.issue.number,
-      #         owner: context.repo.owner,
-      #         repo: context.repo.repo,
-      #         body: 'The preview URL is: VERCEL PREVIEW URL.'
-      #       });
 
-      # bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} &"
+#https://full-stack-dev-q0aanixpi-szemil.vercel.app
+# - uses: actions/github-script@v3
+#   with:
+#     github-token: ${{secrets.GITHUB_TOKEN}}
+#     script: |
+#       github.issues.createComment({
+#         issue_number: context.issue.number,
+#         owner: context.repo.owner,
+#         repo: context.repo.repo,
+#         body: 'The preview URL is: VERCEL PREVIEW URL.'
+#       });
+
+# bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} &"
