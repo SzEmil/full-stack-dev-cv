@@ -31,8 +31,10 @@ jobs:
           secrets.VERCEL_TOKEN }}
 
       - name: Deploy Project Artifacts to Vercel (as background job)
-        run: |
-           echo "vercel-deploy=$(bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} &")" >> $GITHUB_OUTPUT
+        # run: |
+        #    echo "vercel-deploy=$(bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} &")" >> $GITHUB_OUTPUT
+         run: |
+            echo bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} &"
         id: trigger_vercel
 
       - name: Display logs
