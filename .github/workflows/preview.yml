@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: Preview
-      url: https://github.com/SzEmil/full-stack-dev-cv
+      url: ${{ steps.trigger_vercel.outputs.vercel-deploy }}
     steps:
       - uses: actions/checkout@v3
 
@@ -31,8 +31,9 @@ jobs:
           secrets.VERCEL_TOKEN }}
 
       - name: Deploy Project Artifacts to Vercel (as background job)
-        run: |
-          echo "vercel-deploy=$(bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} &")" >> $GITHUB_OUTPUT
+        # run: |
+        #   echo "vercel-deploy=$(bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} &")" >> $GITHUB_OUTPUT
+        run: echo "vercel-deploy=$(yarn vercel deploy --token=${{ secrets.VERCEL_TOKEN }})" >> $GITHUB_OUTPUT
         id: trigger_vercel
 
       - name: Display logs
