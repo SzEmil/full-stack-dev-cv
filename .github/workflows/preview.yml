@@ -34,9 +34,9 @@ jobs:
       - name: Deploy Project Artifacts to Vercel (as background job)
         run: |
           timeout 10 bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} 2>&1 > deploy.log &"
-        id: trigger_vercel
 
       - name: Show Deploy Log
+        id: vercel-url
         run: |
 
           vercel_deploy_url=$(grep -Eo "https?://[^ ]+" deploy.log)
@@ -44,10 +44,9 @@ jobs:
           echo "vercel-deploy-url=$vercel_deploy_url"
       
           echo "vercel-deploy-url=$(grep -Eo "https?://[^ ]+" deploy.log)" >> $GITHUB_OUTPUT
-
       - name: Display URL
         run: |
-          echo ${{steps.trigger_vercel.outputs.vercel-deploy-url}}
+          echo ${{steps.vercel-url.outputs.vercel-deploy-url}}
 
   # echo "vercel-deploy=$(bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} &")" >> $GITHUB_OUTPUT
 
