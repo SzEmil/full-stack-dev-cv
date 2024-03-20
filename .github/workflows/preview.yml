@@ -33,7 +33,7 @@ jobs:
 
       - name: Deploy Project Artifacts to Vercel (as background job)
         run: |
-            url="$(vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }})"
+            url="$(vercel deploy --token=${{ secrets.VERCEL_TOKEN }})"
             vercel alias --token=${{ secrets.VERCEL_TOKEN }} set "$url" full-stack-dev-q0bbnixpi-szemil.vercel.app
         id: trigger_vercel
 
