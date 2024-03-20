@@ -37,13 +37,8 @@ jobs:
 
       - name: Display logs
         run: |
-          echo ${{steps.trigger_vercel.outputs}}
+          echo ${{steps.trigger_vercel.outputs.vercel-deploy}}
 
-      # - name: Make script executable
-      #   run: chmod +x ./CI-CD/scripts/getPreviewURL.sh
-
-      # - name: Get Preview URL
-      #   run: ./CI-CD/scripts/getPreviewURL.sh
 
       # - uses: actions/github-script@v3
       #   with:
