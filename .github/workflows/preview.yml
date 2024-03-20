@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: Preview
-      # url: ${{ steps.trigger_vercel.outputs.vercel-deploy }}
-      url: https://full-stack-dev-q0bbnixpi-szemil.vercel.app
+      url: ${{ steps.trigger_vercel.outputs.vercel-deploy }}
+
     steps:
       - uses: actions/checkout@v3
 
@@ -33,15 +33,18 @@ jobs:
 
       - name: Deploy Project Artifacts to Vercel (as background job)
         run: |
-            url="$(vercel deploy --token=${{ secrets.VERCEL_TOKEN }})"
-            vercel alias --token=${{ secrets.VERCEL_TOKEN }} set "$url" full-stack-dev-q0bbnixpi-szemil.vercel.app
+          timeout 10 bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} 2>&1 > deploy.log &"
         id: trigger_vercel
 
-
-      - name: Display logs
+      - name: Show Deploy Log
         run: |
-          echo ${{steps.trigger_vercel.outputs.vercel-deploy}}
+          cat deploy.log
+      # - name: Display logs
+      #   run: |
+      #     echo ${{steps.trigger_vercel.outputs.vercel-deploy}}
 
+
+  # echo "vercel-deploy=$(bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} &")" >> $GITHUB_OUTPUT
 #https://full-stack-dev-q0aanixpi-szemil.vercel.app
       # - uses: actions/github-script@v3
       #   with:
@@ -55,6 +58,3 @@ jobs:
       #       });
 
       # bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} &"
-
-        # run: |
-        #    echo "vercel-deploy=$(bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} &")" >> $GITHUB_OUTPUT
