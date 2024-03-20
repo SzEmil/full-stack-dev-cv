@@ -44,11 +44,11 @@ jobs:
       
           echo "vercel-deploy-url=$vercel_deploy_url"
       
-          echo "vercel-deploy-url=$vercel_deploy_url" >> $GITHUB_OUTPUT
+          echo "vercel-deploy-url=$(vercel_deploy_url)" >> $GITHUB_OUTPUT
 
-      # - name: Display logs
-      #   run: |
-      #     echo ${{steps.trigger_vercel.outputs.vercel-deploy-url}}
+      - name: Display URL
+        run: |
+          echo ${{steps.trigger_vercel.outputs.vercel-deploy-url}}
 
   # echo "vercel-deploy=$(bash -c "vercel deploy --token=${{ secrets.VERCEL_TOKEN }} &")" >> $GITHUB_OUTPUT
 
