@@ -46,22 +46,22 @@ jobs:
         run: |
           echo ${{steps.vercel-url.outputs.vercel-deploy-url}}
       
-      # - uses: actions/github-script@v6
-      #   with:
-      #     github-token: ${{secrets.GITHUB_TOKEN}}
-      #     script: |
-      #       github.rest.issues.createComment({
-      #         issue_number: context.issue.number,
-      #         owner: context.repo.owner,
-      #         repo: context.repo.repo,
-      #         body: 'Preview: ${{steps.vercel-url.outputs.vercel-deploy-url}}'
-      #       })
-
       - name: Comment PR
-        uses: thollander/actions-comment-pull-request@v2
+        run: |
+          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/issues/comments -d '{ "body": "Komentarz z GitHub Actions", "issue_number": ${{ github.issue.number }}}'
+     
+      - uses: actions/github-script@v6
         with:
-          message: |
-            Hello world ! :wave:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Preview: ${{steps.vercel-url.outputs.vercel-deploy-url}}'
+            })
+
+   
 #https://full-stack-dev-q0aanixpi-szemil.vercel.app
 # - uses: actions/github-script@v3
 #   with:
