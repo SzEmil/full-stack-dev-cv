@@ -44,16 +44,6 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/SzEmil/full-stack-dev-cv.git'
             }
         }
-        // stage('Building Docker Image') {
-        //     steps {
-        //         script {
-        //             withDockerRegistry(credentialsId: 'docker-hub-credentials', toolName: 'docker') {
-        //                 sh "docker build -t szemil/my-nextjs-app:tag123"
-        //                 sh "docker push"
-        //             }
-        //         }
-        //     }
-        // }
         stage('Building Docker Image') {
             steps {
                 script {
