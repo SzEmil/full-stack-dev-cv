@@ -3,9 +3,9 @@ env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
 on:
-  push:
-    branches-ignore:
-      - main
+  pull_request:
+    branches:
+      - "**"
 jobs:
   Deploy-Preview:
     runs-on: ubuntu-latest
@@ -43,24 +43,5 @@ jobs:
         run: |     
           echo "vercel-deploy-url=$(cat deploy.log)" >> $GITHUB_OUTPUT
 
-      - name: Create comment
-        uses: peter-evans/create-or-update-comment@v4.0.0
-        with:
-          issue-number: 1
-          body: |
-            This is a multi-line test comment
-            - With GitHub **Markdown** :sparkles:
-            - Created by [create-or-update-comment][1]
-
-      # - uses: actions/github-script@v6
-      #   with:
-      #     github-token: ${{secrets.GITHUB_TOKEN}}
-      #     script: |
-      #       github.rest.issues.createComment({
-      #         issue_number: context.issue.number,
-      #         owner: context.repo.owner,
-      #         repo: context.repo.repo,
-      #         body: 'Preview: ${{steps.vercel-url.outputs.vercel-deploy-url}}'
-      #       })
 
    
