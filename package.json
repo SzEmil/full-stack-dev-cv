@@ -16,7 +16,7 @@
     "react-dom": "^18",
     "react-responsive": "^9.0.2",
     "react-responsive-carousel": "^3.2.23",
-    "sharp": "^0.33.4"
+    "sharp": "^0.33.1"
   },
   "devDependencies": {
     "@types/node": "^20",
