@@ -16,7 +16,7 @@ type ProjectCardProps = {
   git: string;
 };
 
-export const ProjectCard = async ({
+export const ProjectCard =  ({
   id,
   name,
   picture,
@@ -25,19 +25,19 @@ export const ProjectCard = async ({
   web,
   git,
 }: ProjectCardProps) => {
-  const blurURL = await dynamicBlurDataUrl(picture);
+  //const blurURL = await dynamicBlurDataUrl(picture);
   return (
     <div className="lg:w-[450px] lg:h-[280px] w-[350px] h-[200px] rounded-md hover:border relative group ">
       <Link href={`${Routes.projects}/${id}`}>
         <div
-            style={{ backgroundImage: `url(${picture})` }}
+          //  style={{ backgroundImage: `url(${picture})` }}
           className="w-full  h-full  bg-cover bg-center text-white rounded-lg relative"
         >
           <Image
             src={picture}
             alt={name}
-             placeholder="blur"
-             blurDataURL={blurURL}
+            // placeholder="blur"
+            // blurDataURL={blurURL}
             objectFit="cover"
             layout="fill"
             objectPosition="center"
